@@ -143,6 +143,11 @@ Note: `config.py` resolves variable names case-insensitively, so both
   watch the Groq call logs; make sure the model supports tool calling.
 - **Neo4j connection errors during ingest** → verify `NEO4J_URI`/password and
   that the IP is allowlisted in AuraDB; the script still completes vector-only.
+- **`FileNotFoundError ... SSL_CERT_FILE` at startup** → your shell/conda setup has
+  a stale `SSL_CERT_FILE`/`SSL_CERT_DIR` pointing to a missing file.
+  `config.py` auto-repairs this at import time; to remove the bad value for
+  good run `Remove-Item Env:SSL_CERT_FILE`, or unset it in System Properties →
+  Environment Variables.
 - **"No relevant context found"** → you queried before ingesting, or no vector
   chunk / graph entity matched the question.
 

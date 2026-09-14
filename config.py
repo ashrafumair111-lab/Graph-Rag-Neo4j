@@ -40,6 +40,53 @@ def get_logger(name: str) -> logging.Logger:
     return logger
 
 
+def _sanitize_ssl_env() -> None:
+    """Repair broken SSL_* environment variables at import time.
+
+    Windows/conda/VPN setups occasionally export SSL_CERT_FILE (or
+    SSL_CERT_DIR / REQUESTS_CA_BUNDLE / CURL_CA_BUNDLE) pointing to a
+    file/folder that no longer exists. httpx and requests then crash while
+    building the SSL context, e.g.::
+
+        FileNotFoundError: [Errno 2] No such file or directory
+
+    If a configured path is invalid we point it at certifi's CA bundle (or
+    clear the variable when no trusted bundle can be found), so every client
+    in this process (Qdrant, Cohere, Groq) keeps working.
+    """
+    try:
+        import certifi
+
+        bundle = certifi.where()
+    except Exception:  # pragma: no cover - certifi should always be present
+        bundle = None
+
+    cert_file = os.environ.get("SSL_CERT_FILE")
+    if cert_file and not os.path.isfile(cert_file):
+        logger = logging.getLogger("config")
+        if bundle:
+            logger.warning(
+                "SSL_CERT_FILE points to a missing file (%s) - using certifi's bundle.",
+                cert_file,
+            )
+            os.environ["SSL_CERT_FILE"] = bundle
+        else:
+            os.environ.pop("SSL_CERT_FILE", None)
+
+    cert_dir = os.environ.get("SSL_CERT_DIR")
+    if cert_dir and not os.path.isdir(cert_dir):
+        os.environ.pop("SSL_CERT_DIR", None)
+
+    # Same repair for requests-based clients.
+    for var in ("REQUESTS_CA_BUNDLE", "CURL_CA_BUNDLE"):
+        value = os.environ.get(var)
+        if value and not os.path.isfile(value) and bundle:
+            os.environ[var] = bundle
+
+
+_sanitize_ssl_env()
+
+
 def _get(name: str, default: str = "") -> str:
     """Fetch an env var trying exact, lowercase, then uppercase spellings."""
     value = os.getenv(name)
