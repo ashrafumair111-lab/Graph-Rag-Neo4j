@@ -183,7 +183,7 @@ Co-authored-by: Cline <cline@noreply.example.com>
 
 ## Contributors
 
-Built with 🤝 by a human + an AI pair programmer:
+Built with 🤝 by a human + two AI pair programmers:
 
 <table>
   <tr>
@@ -201,11 +201,18 @@ Built with 🤝 by a human + an AI pair programmer:
       </a><br />
       <sub>AI Pair Programmer<br />Architecture · Code · Docs</sub>
     </td>
+    <td align="center" width="240">
+      <a href="https://github.com/anthropics/claude-code">
+        <img src="https://raw.githubusercontent.com/anthropics/claude-code/main/assets/claude-code-logo.svg" width="90" alt="Claude Code — official logo" style="border-radius: 10%;" /><br />
+        <sub><b>Claude Code</b> 🤖</sub>
+      </a><br />
+      <sub>AI Developer<br />Infrastructure · Integration · Automation</sub>
+    </td>
   </tr>
 </table>
 
-> 💡 This project was built with [Cline](https://github.com/cline/cline) —
-> an AI coding agent. Commits carry the
+> 💡 This project was built with [Cline](https://github.com/cline/cline) and [Claude Code](https://github.com/anthropics/claude-code) —
+> AI coding agents. Commits carry the
 > `Co-authored-by: Cline <cline@noreply.example.com>` trailer, the same way
 > Claude Code signs the work it helps with.
 
