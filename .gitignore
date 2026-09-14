@@ -1,0 +1,38 @@
+# ---- Environment / secrets (never commit real keys) ----
+.env
+.env.local
+*.env
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# ---- Data ----
+data/
+input_data/
+ingest_logs/
+
+# ---- LangGraph local storage ----
+.graph/
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Testing / tooling ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
