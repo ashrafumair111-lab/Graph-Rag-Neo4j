@@ -196,7 +196,7 @@ Built with 🤝 by a human + an AI pair programmer:
     </td>
     <td align="center" width="240">
       <a href="https://github.com/cline/cline">
-        <img src="https://avatars.githubusercontent.com/cline" width="90" alt="Cline" style="border-radius: 50%;" /><br />
+        <img src="https://raw.githubusercontent.com/cline/cline/main/assets/icons/icon.png" width="90" alt="Cline — official logo" /><br />
         <sub><b>Cline</b> 🤖</sub>
       </a><br />
       <sub>AI Pair Programmer<br />Architecture · Code · Docs</sub>
