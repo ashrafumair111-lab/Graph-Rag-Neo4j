@@ -1,8 +1,19 @@
+<div align="center">
+
 # Graph RAG with LangChain + LangGraph
 
-<p align="center">
-  <img src="assets/graph_rag_logo_animated.svg" alt="Graph RAG — animated logo" width="560" />
-</p>
+<img src="assets/graph_rag_logo_animated.svg" alt="Graph RAG — animated logo" width="560" />
+
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-0.3.x-7FC8FF?style=flat&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-0.2.x-7FC8FF?style=flat&logo=langgraph&logoColor=white)
+![Neo4j](https://img.shields.io/badge/Neo4j-AuraDB-4581C3?style=flat&logo=neo4j&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-Cloud-DC244C?style=flat&logo=qdrant&logoColor=white)
+![Cohere](https://img.shields.io/badge/Cohere-Embed_%2B_Rerank-39594D?style=flat)
+![Groq](https://img.shields.io/badge/Groq-LPU_Inference-f55036?style=flat)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat)](LICENSE)
+
+</div>
 
 A simple, production-shaped **Graph RAG** (Graph Retrieval-Augmented Generation)
 system. It builds a knowledge graph from your documents, stores chunk embeddings
@@ -11,16 +22,18 @@ machine that combines **vector search + graph traversal + reranking**.
 
 ## Tech stack
 
-| Component       | Choice                                            |
-| --------------- | ------------------------------------------------- |
-| LLM (answer)    | Groq — `openai/gpt-oss-120b` (langchain-groq) |
-| LLM (extraction)| Same Groq model (via `LLMGraphTransformer`)       |
-| Embeddings      | Cohere — `embed-english-v3.0`                     |
-| Reranking       | Cohere — `rerank-english-v3.0`                    |
-| Vector DB       | Qdrant (cloud)                                    |
-| Graph DB        | Neo4j AuraDB (cloud)                              |
-| Orchestration   | LangChain 0.3.x + LangGraph 0.2.x                 |
-| Config          | `.env` via python-dotenv (nothing hardcoded)      |
+| Component        | Choice                                            |
+| ---------------- | ------------------------------------------------- |
+| ⚡ LLM (answer)   | Groq — `openai/gpt-oss-120b` (langchain-groq)     |
+| ⚡ LLM (extraction) | Same Groq model (via `LLMGraphTransformer`)     |
+| 🧠 Embeddings    | Cohere — `embed-english-v3.0`                     |
+| 🎯 Reranking     | Cohere — `rerank-english-v3.0`                    |
+| <img src="https://cdn.simpleicons.org/qdrant/DC244C" width="16" align="center"/> Vector DB | Qdrant (cloud) |
+| <img src="https://cdn.simpleicons.org/neo4j/4581C3" width="16" align="center"/> Graph DB | Neo4j AuraDB (cloud) |
+| <img src="https://cdn.simpleicons.org/langchain/7FC8FF" width="16" align="center"/> Orchestration | LangChain 0.3.x |
+| <img src="https://cdn.simpleicons.org/langgraph/7FC8FF" width="16" align="center"/> State machine | LangGraph 0.2.x |
+| 🐍 Language      | Python 3.12                                       |
+| ⚙️ Config        | `.env` via python-dotenv (nothing hardcoded)      |
 
 ## Project structure
 
@@ -167,3 +180,46 @@ Commit message
 
 Co-authored-by: Cline <cline@noreply.example.com>
 ```
+
+## Contributors
+
+Built with 🤝 by a human + an AI pair programmer:
+
+<table>
+  <tr>
+    <td align="center" width="240">
+      <a href="https://github.com/ashrafumair111-lab">
+        <img src="https://avatars.githubusercontent.com/ashrafumair111-lab" width="90" alt="ashrafumair111-lab" style="border-radius: 50%;" /><br />
+        <sub><b>@ashrafumair111-lab</b></sub>
+      </a><br />
+      <sub>👤 Creator &amp; Maintainer</sub>
+    </td>
+    <td align="center" width="240">
+      <a href="https://github.com/cline/cline">
+        <img src="https://avatars.githubusercontent.com/cline" width="90" alt="Cline" style="border-radius: 50%;" /><br />
+        <sub><b>Cline</b> 🤖</sub>
+      </a><br />
+      <sub>AI Pair Programmer<br />Architecture · Code · Docs</sub>
+    </td>
+  </tr>
+</table>
+
+> 💡 This project was built with [Cline](https://github.com/cline/cline) —
+> an AI coding agent. Commits carry the
+> `Co-authored-by: Cline <cline@noreply.example.com>` trailer, the same way
+> Claude Code signs the work it helps with.
+
+## License
+
+This project is licensed under the **MIT License** — see the
+[LICENSE](LICENSE) file for details.
+
+<a href="LICENSE">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+</a>
+
+---
+
+<div align="center">
+  <sub>Made with ❤️ and <img src="https://cdn.simpleicons.org/langchain/7FC8FF" width="12"/> <b>LangChain</b> + <img src="https://cdn.simpleicons.org/langgraph/7FC8FF" width="12"/> <b>LangGraph</b> + <img src="https://cdn.simpleicons.org/neo4j/4581C3" width="12"/> <b>Neo4j</b> + <img src="https://cdn.simpleicons.org/qdrant/DC244C" width="12"/> <b>Qdrant</b></sub>
+</div>
