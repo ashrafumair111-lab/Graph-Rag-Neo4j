@@ -1,5 +1,9 @@
 # Graph RAG with LangChain + LangGraph
 
+<p align="center">
+  <img src="assets/graph_rag_logo_animated.svg" alt="Graph RAG — animated logo" width="560" />
+</p>
+
 A simple, production-shaped **Graph RAG** (Graph Retrieval-Augmented Generation)
 system. It builds a knowledge graph from your documents, stores chunk embeddings
 for similarity search, and answers questions through a **LangGraph** state
@@ -37,6 +41,9 @@ machine that combines **vector search + graph traversal + reranking**.
 │   ├── vector_retriever.py # Qdrant top-k similarity search
 │   ├── graph_retriever.py  # Neo4j 1-2 hop neighbourhood facts
 │   └── reranker.py         # Cohere rerank → RAG_TOP_N
+├── assets/
+│   ├── graph_rag_logo_animated.svg  # animated README logo (SMIL)
+│   └── graph_rag_logo.svg           # static logo
 └── graph/
     └── workflow.py         # LangGraph state machine (all nodes wired here)
 ```

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Graph RAG - animated logo (SMIL, dark theme) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 380" role="img" aria-label="Graph RAG logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1322"/>
+      <stop offset="55%" stop-color="#0A0D17"/>
+      <stop offset="100%" stop-color="#12091F"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#A9ECFF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="edgeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00CBFF"/>
+      <stop offset="100%" stop-color="#7C25FF"/>
+    </linearGradient>
+    <radialGradient id="nodeC" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#8FE9FF"/>
+      <stop offset="55%" stop-color="#00CBFF"/>
+      <stop offset="100%" stop-color="#0087C9"/>
+    </radialGradient>
+    <radialGradient id="nodeV" cx="0.35" cy="0.3" r="1">
+      <stop offset="0%" stop-color="#C9A7FF"/>
+      <stop offset="55%" stop-color="#7C25FF"/>
+      <stop offset="100%" stop-color="#4C12B8"/>
+    </radialGradient>
+    <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect x="8" y="8" width="824" height="364" rx="30" fill="url(#bg)"/>
+  <rect x="8" y="8" width="824" height="364" rx="30" fill="none" stroke="#00CBFF" stroke-opacity="0.15" stroke-width="2"/>
+
+  <!-- ===================== graph cluster ===================== -->
+  <!-- edges (base) -->
+  <line x1="180" y1="190" x2="90" y2="135" stroke="url(#edgeGrad)" stroke-width="2.5" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4s" repeatCount="indefinite"/></line>
+  <line x1="180" y1="190" x2="85" y2="245" stroke="url(#edgeGrad)" stroke-width="2.5" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="4.4s" repeatCount="indefinite"/></line>
+  <line x1="180" y1="190" x2="285" y2="245" stroke="url(#edgeGrad)" stroke-width="2.5" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/></line>
+  <line x1="90" y1="135" x2="275" y2="115" stroke="url(#edgeGrad)" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="90" y1="135" x2="85" y2="245" stroke="url(#edgeGrad)" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="275" y1="115" x2="180" y2="62" stroke="url(#edgeGrad)" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="180" y1="190" x2="180" y2="62" stroke="url(#edgeGrad)" stroke-width="2" stroke-opacity="0.4"/>
+  <line x1="285" y1="245" x2="275" y2="115" stroke="url(#edgeGrad)" stroke-width="2" stroke-opacity="0.4"/>
+<!-- edges (draw-in) -->
+  <line x1="180" y1="190" x2="90" y2="135" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="0.15s" fill="freeze"/></line>
+  <line x1="180" y1="190" x2="85" y2="245" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="0.30s" fill="freeze"/></line>
+  <line x1="180" y1="190" x2="285" y2="245" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="0.45s" fill="freeze"/></line>
+  <line x1="90" y1="135" x2="275" y2="115" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="0.60s" fill="freeze"/></line>
+  <line x1="90" y1="135" x2="85" y2="245" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="0.75s" fill="freeze"/></line>
+  <line x1="275" y1="115" x2="180" y2="62" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="0.90s" fill="freeze"/></line>
+  <line x1="180" y1="190" x2="180" y2="62" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="1.05s" fill="freeze"/></line>
+  <line x1="285" y1="245" x2="275" y2="115" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="400" stroke-dashoffset="400">
+    <animate attributeName="stroke-dashoffset" from="400" to="0" dur="0.8s" begin="1.20s" fill="freeze"/></line>
+
+  <!-- data packets travelling along edges -->
+  <line x1="90" y1="135" x2="180" y2="190" stroke="#BFF3FF" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 14" stroke-opacity="0">
+    <animate attributeName="stroke-opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="2.4s" repeatCount="indefinite" begin="0.5s"/>
+    <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.5s" path="M180 190 L90 135"/></line>
+  <line x1="285" y1="245" x2="180" y2="190" stroke="#DCC0FF" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 14" stroke-opacity="0">
+    <animate attributeName="stroke-opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="2.8s" repeatCount="indefinite" begin="0.9s"/>
+    <animateMotion dur="2.8s" repeatCount="indefinite" begin="0.9s" path="M180 190 L285 245"/></line>
+  <line x1="275" y1="115" x2="180" y2="62" stroke="#BFF3FF" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="3 14" stroke-opacity="0">
+    <animate attributeName="stroke-opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="2.2s" repeatCount="indefinite" begin="1.3s"/>
+    <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.3s" path="M180 62 L275 115"/></line>
+
+<!-- main node (violet) with pulse ring -->
+  <circle cx="180" cy="190" r="18" fill="#7C25FF" opacity="0.45" filter="url(#glow)"/>
+  <circle cx="180" cy="190" r="20" fill="url(#nodeV)">
+    <animate attributeName="r" values="18;23;18" dur="3.4s" repeatCount="indefinite"/></circle>
+  <circle cx="179" cy="188" r="7" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="180" cy="190" r="20" fill="none" stroke="#00CBFF" stroke-width="2">
+    <animate attributeName="r" values="20;42" dur="2.6s" repeatCount="indefinite" begin="0.6s"/>
+    <animate attributeName="stroke-opacity" values="0.8;0" dur="2.6s" repeatCount="indefinite" begin="0.6s"/></circle>
+
+  <!-- satellite nodes -->
+  <circle cx="90" cy="135" r="9" fill="#00CBFF" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="90" cy="135" r="15" fill="url(#nodeC)">
+    <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite" begin="0.2s"/></circle>
+  <circle cx="89" cy="133" r="5" fill="#FFFFFF" opacity="0.7"/>
+
+  <circle cx="275" cy="115" r="9" fill="#00CBFF" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="275" cy="115" r="15" fill="url(#nodeC)">
+    <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite" begin="0.8s"/></circle>
+  <circle cx="274" cy="113" r="5" fill="#FFFFFF" opacity="0.7"/>
+
+  <circle cx="85" cy="245" r="9" fill="#00CBFF" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="85" cy="245" r="15" fill="url(#nodeC)">
+    <animate attributeName="r" values="15;18;15" dur="3s" repeatCount="indefinite" begin="1.4s"/></circle>
+  <circle cx="84" cy="243" r="5" fill="#FFFFFF" opacity="0.7"/>
+
+  <circle cx="285" cy="245" r="9" fill="#7C25FF" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="285" cy="245" r="15" fill="url(#nodeV)">
+    <animate attributeName="r" values="15;18;15" dur="3.4s" repeatCount="indefinite" begin="0.5s"/></circle>
+  <circle cx="284" cy="243" r="5" fill="#FFFFFF" opacity="0.7"/>
+
+  <circle cx="180" cy="62" r="9" fill="#00CBFF" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="180" cy="62" r="14" fill="url(#nodeC)">
+    <animate attributeName="r" values="14;17;14" dur="2.8s" repeatCount="indefinite" begin="1.1s"/></circle>
+  <circle cx="179" cy="60" r="4.5" fill="#FFFFFF" opacity="0.7"/>
+
+<!-- wordmark -->
+  <text x="425" y="168" font-family="'Segoe UI', Arial, sans-serif" font-size="62" font-weight="800" letter-spacing="3" fill="url(#titleGrad)">GRAPH RAG</text>
+  <text x="428" y="210" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="500" letter-spacing="7" fill="#9AA7C0">VECTOR SEARCH&#183;KNOWLEDGE GRAPH</text>
+  <text x="429" y="240" font-family="'Segoe UI', Arial, sans-serif" font-size="14" letter-spacing="3" fill="#5D6B85">LANGCHAIN + LANGGRAPH + QDRANT + NEO4J</text>
+
+  <!-- underline accent -->
+  <rect x="428" y="258" width="210" height="4" rx="2" fill="url(#edgeGrad)">
+    <animate attributeName="width" values="0;210" dur="1.2s" begin="0.4s" fill="freeze"/></rect>
+</svg>
