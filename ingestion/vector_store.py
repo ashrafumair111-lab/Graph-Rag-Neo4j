@@ -5,6 +5,7 @@ Payload stored per point:
 """
 from __future__ import annotations
 
+import uuid
 from typing import Any, Dict, List
 
 from langchain_core.documents import Document
@@ -18,6 +19,15 @@ from config import get_logger, get_settings
 logger = get_logger(__name__)
 
 _UPSERT_BATCH = 64  # safe upsert batch size for Qdrant
+
+
+def _point_id(chunk_id: str) -> str:
+    """Deterministic UUID for a chunk_id (Qdrant point ids must be UUID/int).
+
+    Same chunk_id always maps to the same UUID, so re-running ingest simply
+    replaces the existing point instead of duplicating it.
+    """
+    return str(uuid.uuid5(uuid.NAMESPACE_DNS, str(chunk_id)))
 
 
 class QdrantVectorStore:
@@ -94,7 +104,7 @@ class QdrantVectorStore:
 
             points = [
                 PointStruct(
-                    id=str(doc.metadata["chunk_id"]),
+                    id=_point_id(doc.metadata["chunk_id"]),
                     vector=vector,
                     payload={
                         "chunk_id": doc.metadata["chunk_id"],
