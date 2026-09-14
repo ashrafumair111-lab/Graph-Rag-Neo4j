@@ -91,7 +91,7 @@ class Settings:
 def get_settings() -> Settings:
     return Settings(
         groq_api_key=_get("groq_api_key"),
-        groq_model=_get("groq_model", "llama-3.3-70b-versatile"),
+        groq_model=_get("groq_model", "openai/gpt-oss-120b"),
         cohere_api_key=_get("cohere_api_key"),
         cohere_embed_model=_get("cohere_embed_model", "embed-english-v3.0"),
         cohere_rerank_model=_get("cohere_rerank_model", "rerank-english-v3.0"),

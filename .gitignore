@@ -18,6 +18,7 @@ venv/
 data/
 input_data/
 ingest_logs/
+*.pdf
 
 # ---- LangGraph local storage ----
 .graph/

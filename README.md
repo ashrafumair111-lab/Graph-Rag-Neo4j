@@ -9,7 +9,7 @@ machine that combines **vector search + graph traversal + reranking**.
 
 | Component       | Choice                                            |
 | --------------- | ------------------------------------------------- |
-| LLM (answer)    | Groq — `llama-3.3-70b-versatile` (langchain-groq) |
+| LLM (answer)    | Groq — `openai/gpt-oss-120b` (langchain-groq) |
 | LLM (extraction)| Same Groq model (via `LLMGraphTransformer`)       |
 | Embeddings      | Cohere — `embed-english-v3.0`                     |
 | Reranking       | Cohere — `rerank-english-v3.0`                    |
@@ -117,7 +117,7 @@ Every external call is wrapped so the pipeline **never crashes**:
 | Variable              | Meaning                          | Default                    |
 | --------------------- | -------------------------------- | -------------------------- |
 | `GROQ_API_KEY`        | Groq API key                     | — (required)               |
-| `GROQ_MODEL`          | Groq model                       | `llama-3.3-70b-versatile`  |
+| `GROQ_MODEL`          | Groq model                       | `openai/gpt-oss-120b`       |
 | `COHERE_API_KEY`      | Cohere API key                   | — (required)               |
 | `COHERE_EMBED_MODEL`  | Embeddings model                 | `embed-english-v3.0`       |
 | `COHERE_RERANK_MODEL` | Rerank model                     | `rerank-english-v3.0`      |
