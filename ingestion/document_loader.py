@@ -67,7 +67,12 @@ def load_documents(path: str) -> List[Document]:
             if p.suffix.lower() in SUPPORTED_EXTENSIONS and not p.name.startswith("~$")
         )
     else:
-        raise FileNotFoundError(f"Path does not exist: {path}")
+        raise FileNotFoundError(
+            f"Path does not exist: {path}. Create a folder with your documents "
+            f"(supported: {', '.join(sorted(SUPPORTED_EXTENSIONS))}) and pass it "
+            f"to ingest.py, e.g. `python ingest.py data`. Tip: run "
+            f"`python create_sample_data.py` to generate sample files."
+        )
 
     documents: List[Document] = []
     for file_path in files:

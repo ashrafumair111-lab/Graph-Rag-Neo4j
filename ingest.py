@@ -41,7 +41,15 @@ def run_ingestion(args: argparse.Namespace) -> None:
 
     # 1) Load documents -----------------------------------------------------
     step_start = time.perf_counter()
-    documents = load_documents(args.path)
+    try:
+        documents = load_documents(args.path)
+    except FileNotFoundError as exc:
+        logger.error(
+            "Could not find input path. %s "
+            "(Run `python create_sample_data.py` to generate sample docs.)",
+            exc,
+        )
+        return
     if not documents:
         logger.error("No documents loaded from %s — aborting.", args.path)
         return
