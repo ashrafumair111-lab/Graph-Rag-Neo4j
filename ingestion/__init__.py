@@ -1,0 +1,1 @@
+"""Document ingestion pipeline (load -> chunk -> vector store -> graph store)."""
